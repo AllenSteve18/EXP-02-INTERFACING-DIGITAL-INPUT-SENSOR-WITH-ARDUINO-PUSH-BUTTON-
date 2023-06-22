@@ -1,4 +1,4 @@
-# EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON
+![image](https://github.com/AllenSteve18/EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/131678601/4bd5c5fa-5fba-480f-b128-ceccc7b253ed)# EXP-01-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON
 
 AIM:  To interface a digital input (push button) and blink and LED upon activation.
 COMPONENTS REQUIRED:
@@ -67,15 +67,32 @@ FIGURE -03
 
 
 PROGRAM 
- 
- 
- 
- 
- 
+```
+int buttonstate = 0;
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(13, INPUT);
+}
+
+void loop()
+{
+  buttonstate = digitalRead(13);
+  if (buttonstate == HIGH) {
+   digitalWrite(2, HIGH);
+   } else {
+   digitalWrite(2,LOW);
+   }
+   delay(10);
+}
+  
+```
 
 
 
 Output of the simulation :
+![1](https://github.com/AllenSteve18/EXP-02-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/131678601/b8514171-829a-4be1-be7b-54161f9ca8c1)
 
-[My image](username.github.com/repository/img/image.jpg)
+Result :
+Thus the interfaceing digital input sensor with ardunio push button is completed using thinkercad software sucessfully
 
